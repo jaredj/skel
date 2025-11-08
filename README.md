@@ -39,6 +39,8 @@ Populate the following secrets so that both GitHub Actions and your Codex worksp
 
 > Copy [`codex.env.example`](codex.env.example) and fill it with your values before uploading them to the Codex environment. Keep the populated file out of version control.
 
+> ⚠️ There is no single secret store that feeds GitHub Actions, Codespaces, and Codex simultaneously. Add the same values to **GitHub repository secrets** (for CI and deploys), **Codespaces secrets** (for interactive development), and the **Codex environment** so every surface has the credentials it needs.
+
 ### GitHub Actions guardrails
 
 - `.github/workflows/deploy.yml` deploys previews on pull requests and promotes changes to production whenever `main` is updated.
